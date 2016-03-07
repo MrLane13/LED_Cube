@@ -1,3 +1,21 @@
+/*
+ * ORIGINAL AUTHOR: Devin
+ * EDITING CONTRIBUTOR: Lane Mills
+ * LAST UPDATED: 03/07/16
+ * 
+ * This code is meant to be used on a 3x3x3 LED Cube
+ * comprising of three 3x3 LED platforms, all soldered ontop
+ * of one another, with each platform ground being hooked
+ * up to one 330 OHm resistor.
+ * 
+ * First in this project are the methods utilized by the main
+ * function. Notice we are using pins 2-10 for the rowxcolumn
+ * connections on our LED Cube, and pins 11-13 for our GND
+ * or platform grounding connections.
+ * 
+ */
+
+
 // Clears the LED's state to off
 void Clr()
 {
@@ -10,9 +28,9 @@ void Clr()
   digitalWrite(8,LOW);
   digitalWrite(9,LOW);
   digitalWrite(10,LOW);
-  digitalWrite(11,HIGH);//gound
-  digitalWrite(12,HIGH);//gound
-  digitalWrite(13,HIGH);//gound
+  digitalWrite(11,HIGH);//ground platform 1 W/ 330 OHm resistor
+  digitalWrite(12,HIGH);//ground platform 2 W/ 330 OHm resistor
+  digitalWrite(13,HIGH);//ground platform 3 W/ 330 OHm resistor
 
 }
 
@@ -28,9 +46,9 @@ void On()
   digitalWrite(8,HIGH);
   digitalWrite(9,HIGH);
   digitalWrite(10,HIGH);
-  digitalWrite(11,LOW);//gound
-  digitalWrite(12,LOW);//gound
-  digitalWrite(13,LOW);//gound
+  digitalWrite(11,LOW);//ground
+  digitalWrite(12,LOW);//ground
+  digitalWrite(13,LOW);//ground
 }
 
 // Rotates around center
